@@ -1,0 +1,117 @@
+html
+    head
+        title GYMONATOR
+        link(rel="stylesheet" href="/font/css/font-awesome.min.css")
+        link(rel="stylesheet" href="/semantic/semantic-custom.css")
+        link(rel="stylesheet" href="/semantic/dist/semantic.min.css")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+        script(src="/semantic/dist/semantic.min.js")
+           
+        style(type='text/css').
+           
+           
+            h1.ui.header{
+            padding-top: 1em; 
+            font-size: 4em;
+            font-family: 'century gothic';
+            font-weight: 200%;
+            color:white;
+            }
+            h2{
+            font-size:1.4em;
+            padding:0;
+            margin-top:0;   
+            font-weight: 100%;
+            color:#ffcccc;
+            }
+            .bg{
+                background-color: #1B1C1E;
+                width: auto;
+                height: auto;
+            }
+            .ui.message.warning.transition.visible{
+                height:60px;
+                font-size:13px;
+            }
+            .regform{
+                padding-top:20px;
+            }
+            h3.ui.horizontal.divider.header{
+                font-weight:200%;
+            }
+            #programlist{
+                padding-top:50;
+                //- font-size:1.4em;
+                //- margin-top:0;   
+                //- font-weight: 100%;
+                //- color:#000;
+            }
+            #programlist > .column> h2{
+                font-size:1.4em;
+                margin-top:0;   
+                font-weight: 100%;
+                color:#000;
+            }
+           
+            .label{
+                font-family:'century gothic';
+                font-weight:200%;
+            }    
+            .hey{
+                padding-top:50px;
+            }
+    body        
+        #all.container             
+            #navbar.ui.large.top.fixed.inverted.menu   
+                    a.header.item(href='/home') A - TEAM FITNESS CENTER
+                        i.heartbeat.icon      
+                    .right.menu
+                        .item.active.red Trainers
+                        a.item(href='/program') Program
+                        a.item(href='/login') Logout
+                        
+            .bg
+                .column
+                    .ui.column.grid
+                        .middle.aligned.center.aligned.column                      
+                            h1.ui.header Hi Admin!
+                            h2 Edit your trainer information here.
+            
+            
+            .row   
+                .ui.two.column.centered.grid
+                    each trainer in trainers
+                        form.ui.massive.form.hey(method="POST" action=`/trainer/edit/${trainer.trainerID}`)
+                            .field
+                                label Trainer Name
+                                br
+                                input(type='text' name='tfname' value=`${trainer.trainerFName}`)
+                            .field
+                                input(type='text' name='tmname' value=`${trainer.trainerMName}`)
+                            .field
+                                input(type='text' name='tlname' value=`${trainer.trainerLName}`) 
+                            .field
+                                label Contact
+                                br
+                                input(type='text' name='tcontact' value=`${trainer.trainerContact}`)
+                            .field
+                                label Email Address
+                                br
+                                input(type='text' name='temailadd' value=`${trainer.trainerEmailAdd}`)
+                            .field
+                                label Trainer Description
+                                br
+                                textarea(rows='2' name='tdesc' value=`${trainer.trainerDesc}`)
+                            .field
+                                label Trainer Code
+                                br
+                                input(type='text' name='tcode' value=`${trainer.trainerCode}`)
+                            .field 
+                                .a(href='/home')
+                                    button.ui.fluid.large.red.submit.button(type="submit") Confirm
+    script.
+        $('#all').transition({  
+        animation  : 'fade in',
+        duration   : '2s'});                              
+    
+        

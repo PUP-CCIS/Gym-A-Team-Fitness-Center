@@ -1,0 +1,102 @@
+html
+    head
+        title GYMONATOR
+        link(rel="stylesheet" href="/font/css/font-awesome.min.css")
+        link(rel="stylesheet" href="/semantic/semantic-custom.css")
+        link(rel="stylesheet" href="/semantic/dist/semantic.min.css")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+        script(src="/semantic/dist/semantic.min.js")
+           
+        style(type='text/css').
+           
+           
+            h1.ui.header{
+            padding-top: 1em; 
+            font-size: 4em;
+            font-family: 'century gothic';
+            font-weight: 200%;
+            color:white;
+            }
+            h2{
+            font-size:1.4em;
+            padding:0;
+            margin-top:0;   
+            font-weight: 100%;
+            color:#ffcccc;
+            }
+            .bg{
+                background-color: #1B1C1E;
+                width: auto;
+                height: auto;
+            }
+            .ui.message.warning.transition.visible{
+                height:60px;
+                font-size:13px;
+            }
+            .regform{
+                padding-top:20px;
+            }
+            h3.ui.horizontal.divider.header{
+                font-weight:200%;
+            }
+            #programlist{
+                padding-top:50;
+                //- font-size:1.4em;
+                //- margin-top:0;   
+                //- font-weight: 100%;
+                //- color:#000;
+            }
+            #programlist > .column> h2{
+                font-size:1.4em;
+                margin-top:0;   
+                font-weight: 100%;
+                color:#000;
+            }
+            #programlist > .column> a{
+                margin-bottom:20;
+                
+            }
+
+    body        
+        #all.container             
+            #navbar.ui.large.top.fixed.inverted.menu   
+                    a.header.item(href='/home') A - TEAM FITNESS CENTER
+                        i.heartbeat.icon      
+                    .right.menu
+                        .item.active.red Programs
+                        a.item(href='/home#about') About
+                        a.item(href='/login') Login
+                        a.item(href='/signup') Register
+                        
+            .bg
+                .column
+                    .ui.column.grid
+                        .middle.aligned.center.aligned.column
+                        
+                            h1.ui.header Available Programs
+                            h2 To our beloved members - these are the programs and events as of now 
+                            h2 exlusively juat for you because A-Team loves you.  
+                            h2(style="font-size:1em") - Management
+	                        
+
+
+            .row
+                .ui.two.column.centered.grid
+                    .column      
+                        each program in programs
+                            tr
+                                #programlist.ui.equal.width.center.aligned.grid
+                                    .column
+                                        h2= `${program.progName}`
+                                    .column
+                                        h4= `${program.progDate}`
+                                    .column
+                                        h4= `${program.progPrice}`
+                                    .column
+                                        button.ui.fluid.large.red.submit.button(type="submit") Join
+        script.
+            $('#all').transition({  
+            animation  : 'fade in',
+            duration   : '2s'});                              
+     
+            

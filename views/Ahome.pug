@@ -1,0 +1,214 @@
+html
+    head
+        title GYMONATOR
+        link(rel="stylesheet" href="/font/css/font-awesome.min.css")
+        link(rel="stylesheet" href="/semantic/semantic-custom.css")
+        link(rel="stylesheet" href="/semantic/dist/semantic.min.css")
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css', integrity='sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M', crossorigin='anonymous')
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+        script(src="/semantic/dist/semantic.min.js")
+        script(src='https://code.jquery.com/jquery-3.2.1.js', integrity='sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=', crossorigin='anonymous')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js', integrity='sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1', crossorigin='anonymous')
+
+        
+    
+        style(type='text/css').
+        
+            .pimg1, .pimg2, .pimg3{
+            position:relative;
+            opacity:0.70;
+            background-position:center;
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            }
+            .pimg2{
+            background-image:url('/images/10.jpeg');
+            min-height:400px;
+            }
+            .pimg3{
+            background-image:url('/images/11.jpg');
+            min-height:400px;
+            }
+            .section{
+            text-align:center;
+            padding:50px 80px;
+            }
+            .section-light{
+            background-color:#282e34;
+            color:#ddd;
+            }
+            .section-dark{
+            background-color:#282e34;
+            color:#ddd;
+            }
+            .ptext{
+            position:absolute;
+            top:50%;
+            width:100%;
+            text-align:center;
+            color:#000;
+            font-size:27px;
+            letter-spacing:8px;
+            text-transform:uppercase;
+            }
+            .ptext .border{
+            background-color:#111;
+            color:#fff;
+            padding:20px;
+            }
+            .ptext .border.trans{
+            background-color:transparent;
+            }
+            @media(max-width:568px){
+            .pimg1, .pimg2, .pimg3{
+                background-attachment:scroll;
+            }
+            }
+                                                    //- original
+            body {
+            background-color: #fff;
+            }
+            body > .grid {
+            height: 100%;
+            }    
+            h1.ui.header{
+            padding-top: 1em; 
+            font-size: 4em;
+            font-family: 'century gothic';
+            font-weight: 200%;
+            color: white;
+            }
+            h2.ui.header{
+            font-size: 2em;
+            font-family: 'century gothic';
+            font-weight: 200%;
+            color: white;
+            }
+            h4,h3,h2{
+                color:#999999; 
+            }
+            #login{
+            font-size: 24px;
+            font-family: 'century gothic';
+            font-weight: 200%;
+            color: white;
+            }
+            #lstring{
+                padding-bottom:3em;
+            }            
+            form {
+                padding:2em;
+                border-radius: 15px;
+            }
+            .ui.message.warning.transition.visible{
+                height:60px;
+                font-size:13px;
+            }
+            .bg{
+            height: 200%;
+            }
+            .bg{
+            background-color: #1B1C1E;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+            overflow: auto;
+            }
+            .ui.grid{
+            padding-top:50px;
+            }    
+            .carousel-inner {
+                min-height:50%;
+               
+            }
+            #badtrip.ui.two.column.grid{
+                padding:0;
+                
+            }   
+    body
+        #all.container  
+            .bg
+                .ui.center.aligned.grid
+                    #carousel.column 
+                        #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+                            ol.carousel-indicators
+                                li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+                                li(data-target='#carouselExampleIndicators', data-slide-to='1')
+                                li(data-target='#carouselExampleIndicators', data-slide-to='2')
+                            .carousel-inner
+                                .carousel-item.active
+                                    img.d-block.w-100(src='/images/7.jpg', alt='First slide')
+                                .carousel-item
+                                    img.d-block.w-100(src='/images/8.jpg', alt='Second slide')
+                                .carousel-item
+                                    img.d-block.w-100(src='/images/9.jpg', alt='Third slide')
+                            a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+                                span.carousel-control-prev-icon(aria-hidden='true')
+                                span.sr-only Previous
+                            a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+                                span.carousel-control-next-icon(aria-hidden='true')
+                                span.sr-only Next
+                
+                //- .ui.grid
+                //-     .column
+                //-         h2.ui.header <center>"Don't Stop, push harder, keep Going"
+                //-         h4 <center> A-Team Fitness Center
+
+                //- .ui.vertical.stripe.segment
+                //-     #about.ui.text.container
+                //-             h1.ui.header <center>What is A-Team Fitness Center?
+                //-             h2 <center>
+                //-                 |  A-Team Fitness Center begins with a belief in fitness. The aim of CrossFit is to forge a broad, general and inclusive fitness. We have sought to build a program that will best prepare trainees for any physical contingency — not only for the unknown, but for the unknowable. After looking at all sport and physical tasks collectively, we asked what physical skills and adaptations would most universally lend themselves to performance advantage. Capacity culled from the intersection of all sports demands would quite logically lend itself well to all sport. In sum, our specialty is not specializing.
+                //- .column
+
+                section.section.section-light
+                    h2.ui.header <center>"Don't Stop, push harder, keep Going"
+                    h4 <center> A-Team Fitness Center
+                #about.pimg2
+                    .ptext
+                        span.border.trans
+                            | About
+                section.section.section-dark
+                    h2.ui.header <center>What is A-Team Fitness Center?
+                    h4 <center>
+                        |  A-Team Fitness Center begins with a belief in fitness. The aim is to forge a broad, general and inclusive fitness. We have sought to build a program that will best prepare trainees for any physical contingency — not only for the unknown, but for the unknowable. After looking at all sport and physical tasks collectively, we asked what physical skills and adaptations would most universally lend themselves to performance advantage. Capacity culled from the intersection of all sports demands would quite logically lend itself well to all sport. In sum, our specialty is not specializing.
+                .pimg3
+                    .ptext
+                        span.border.trans
+                            | Contact Us
+                section.section.section-dark
+                    #badtrip.ui.two.column.grid
+                        .column
+                            h4 Address
+                            h6 Newton Plaza Sta. Mesa, Manila
+                            h6 C. Aguila St. Mendiola, Manila
+                        .column
+                            h4 Cellphone Number
+                            h6 <b>SUN</b> - 09334127526
+                            h6 <b>GLOBE</b> - 09155636830
+                .ui.black.inverted.vertical.footer.segment
+                    .ui.center.aligned.container
+                        .ui.inverted.section.divider
+                        .ui.horizontal.inverted.small.divided.link.list
+                            .item Copyright &copy; qt ni rafh 2017         
+                    #navbar.ui.large.top.fixed.inverted.menu  
+                        a.header.item.active.red(href='/home') A - TEAM FITNESS CENTER
+                            i.heartbeat.icon
+                        .right.menu
+                            a.item(href='/home/#about') About
+                            a.item(href='/login') Login
+                            a.item(href='/signup') Register                       
+    script.
+        $('#all').transition({
+            animation  : 'fade in',
+            duration   : '2s'});
+        

@@ -1,0 +1,35 @@
+{
+  "name": "GYMonator",
+  "version": "1.0.0",
+  "description": "A system that aims to help the gym owner's to have an organized records of their customers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Allera-Alyssa/Project-Proposal-.git"
+  },
+  "keywords": [
+    "expressjs",
+    "semanticjs"
+  ],
+  "author": "Maricar Oriel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Allera-Alyssa/Project-Proposal-/issues"
+  },
+  "homepage": "https://github.com/Allera-Alyssa/Project-Proposal-#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "express-session": "^1.15.4",
+    "method-override": "^2.3.9",
+    "morgan": "^1.8.2",
+    "mysql": "^2.13.0",
+    "pug": "^2.0.0-rc.2",
+    "semantic-ui-calendar": "0.0.8",
+    "serve-static": "^1.12.3"
+  }
+}

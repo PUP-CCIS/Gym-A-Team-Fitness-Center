@@ -1,0 +1,177 @@
+html
+    head
+        title GYMONATOR
+        link(rel="stylesheet" href="/font/css/font-awesome.min.css")
+        link(rel="stylesheet" href="/semantic/semantic-custom.css")
+        link(rel="stylesheet" href="/semantic/dist/semantic.min.css")
+        link(href='https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css', rel='stylesheet', type='text/css')
+        link(rel='stylesheet', href='/bower_components/semantic-ui-calendar/dist/calendar.min.css')
+        
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+        script(src="/semantic/dist/semantic.min.js")
+        script(type='text/javascript', src='/bower_components/semantic-ui-calendar/dist/calendar.min.js')
+        script(src='https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js')
+        meta(charset='utf-8')
+
+        style(type='text/css').
+            h1.ui.header{
+            padding-top: 1em; 
+            font-size: 4em;
+            font-family: 'century gothic';
+            font-weight: 200%;
+            color:white;
+            }
+            h2{
+            font-size:1.4em;
+            padding:0;
+            margin-top:0;   
+            font-weight: 100%;
+            color:#ffcccc;
+            }
+            .bg{
+                background-color: #1B1C1E;
+                width: auto;
+                height: auto;
+                padding:0;
+                margin:0;   
+            }
+            .ui.message.warning.transition.visible{
+                height:60px;
+                font-size:13px;
+            }
+            .regform{
+                padding-top:20px;
+            }
+            h3.ui.horizontal.divider.header{
+                font-weight:200%;
+            }
+            #sched{
+                padding-top:30px;
+            }
+        
+
+    body        
+        - var weekDays = 
+        #all.container             
+            #navbar.ui.large.top.fixed.inverted.menu   
+                    a.header.item(href='/member') A - TEAM FITNESS CENTER
+                        i.heartbeat.icon      
+                    .right.menu
+                        .item.active.red Trainers
+                        a.item(href='/member/program') Program  
+                        a.item(href='/login') Logout                 
+            .bg
+                .column
+                    .ui.column.grid
+                        .middle.aligned.center.aligned.column
+                        
+                            h1.ui.header Schedule
+                            h2 Set Your Schedule here
+            .ui.two.column.centered.grid
+                #sched.column 
+                    .ui.three.column.grid   
+                        .column   
+                        .center.aligned.column                                  
+                    tr
+                        #programlist.ui.equal.width.center.aligned.grid
+                            <center>
+                            .column
+                                .ui.form(method="POST" action=``)
+                                    .inline.fields
+                                        .eight.wide.field
+
+                                            .ui.slider.checkbox
+                                                input.hidden(type='checkbox' tabindex='0')
+                                                label Monday
+                                        .field
+                                            .ui.calendar
+                                                .ui.input.left.icon
+                                                    i.time.icon
+                                                    input(type='text', placeholder='Time')
+                            .column
+                                .ui.form
+                                    .inline.fields
+                                        .eight.wide.field
+                                            .ui.slider.checkbox
+                                                input.hidden(type='checkbox', tabindex='1')
+                                                label Tuesday
+                                        .field
+                                            .ui.calendar
+                                                .ui.input.left.icon
+                                                    i.time.icon
+                                                    input(type='text', placeholder='Time')
+                            .column
+                                .ui.form
+                                    .inline.fields
+                                        .eight.wide.field
+                                            .ui.slider.checkbox
+                                                input.hidden(type='checkbox', tabindex='2')
+                                                label Wednesday
+                                        .field
+                                            .ui.calendar
+                                                .ui.input.left.icon
+                                                    i.time.icon
+                                                    input(type='text', placeholder='Time')
+                            .column
+                                .ui.form
+                                    .inline.fields
+                                        .eight.wide.field
+                                            .ui.slider.checkbox
+                                                input.hidden(type='checkbox', tabindex='3')
+                                                label Thursday
+                                        .field
+                                            .ui.calendar
+                                                .ui.input.left.icon
+                                                    i.time.icon
+                                                    input(type='text', placeholder='Time')
+                            .column
+                                .ui.form
+                                    .inline.fields
+                                        .eight.wide.field
+                                            .ui.slider.checkbox
+                                                input.hidden(type='checkbox', tabindex='4')
+                                                label Friday
+                                        .field
+                                            .ui.calendar
+                                                .ui.input.left.icon
+                                                    i.time.icon
+                                                    input(type='text', placeholder='Time')
+                            .column
+                                .ui.form
+                                    .inline.fields
+                                        .eight.wide.field
+                                            .ui.slider.checkbox
+                                                input.hidden(type='checkbox', tabindex='5')
+                                                label Saturday
+                                        .field
+                                            .ui.calendar
+                                                .ui.input.left.icon
+                                                    i.time.icon
+                                                    input(type='text', placeholder='Time')
+                            .column
+                                .ui.form
+                                    .inline.fields
+                                        .eight.wide.field
+                                            .ui.slider.checkbox
+                                                input.hidden(type='checkbox', tabindex='6')
+                                                label Sunday
+                                        .field
+                                            .ui.calendar
+                                                .ui.input.left.icon
+                                                    i.time.icon
+                                                    input(type='text', placeholder='Time')
+                            .column
+                                button.ui.fluid.large.red.submit.button(type="submit") Submit
+                                      
+                            .ui.message
+                                .header
+                                    | Notice
+                                p
+                                    | Choose a maximum of <b>4</b> days and set session starting time for each. 
+
+    script.
+        $('#all').transition({  
+        animation  : 'fade in',
+        duration   : '2s'});   
+        $('.ui.checkbox').checkbox(); 
+        $('.ui.calendar').calendar({type: 'time'});

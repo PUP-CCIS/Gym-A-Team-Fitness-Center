@@ -1,0 +1,28 @@
+{
+  "base": "semantic\\",
+  "paths": {
+    "source": {
+      "config": "src/theme.config",
+      "description": "A system",
+      "definitions": "src/definitions/",
+      "site": "src/site/",
+      "themes": "src/themes/"
+    },
+    "output": {
+      "packaged": "dist/",
+      "uncompressed": "dist/components/",
+      "compressed": "dist/components/",
+      "themes": "dist/themes/"
+    },
+    "clean": "dist/"
+  },
+  "permission": false,
+  "autoInstall": false,
+  "rtl": false,
+  "version": "2.2.13",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Allera-Alyssa/Proposal-Project-.git"
+  },
+}

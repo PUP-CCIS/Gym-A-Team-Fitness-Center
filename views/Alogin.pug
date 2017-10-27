@@ -1,0 +1,162 @@
+html
+    head
+        title GYMONATOR
+        link(rel="stylesheet" href="/font/css/font-awesome.min.css")
+        link(rel="stylesheet" href="/semantic/semantic-custom.css")
+        link(rel="stylesheet" href="/semantic/dist/semantic.min.css")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+        script(src="/semantic/dist/semantic.min.js")
+        
+    
+        style(type='text/css').
+            body {
+            background-color: #fff;
+            }
+            body > .grid {
+            height: 100%;
+            }    
+            h1.ui.header{
+            padding-top: 1em; 
+            font-size: 4em;
+            font-family: 'century gothic';
+            font-weight: 200%;
+            color: white;
+            }
+            #login{
+             
+            font-size: 24px;
+            font-family: 'century gothic';
+            font-weight: 200%;
+            color: white;
+            }
+            h2{
+            letter-spacing: ;
+            font-size:1.4em;
+            padding:0;
+            margin-top:0;  
+            font-family:; 
+            font-weight: 100%;
+            color:white;
+            }
+            #lstring{
+                padding-bottom:3em;
+            }            
+            form {
+                
+                padding:2em;
+                border-radius: 15px;
+            }
+            .ui.message.warning.transition.visible{
+                height:60px;
+                font-size:13px;
+            }
+            .bg{
+            height: 200%;
+            }
+            .bg{
+            background-image: url("/images/login.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+            overflow: auto;
+            }
+            .ui.grid{
+            padding-top:50px;
+            }
+
+
+            
+           
+    
+    body
+        #all.container  
+            .bg
+                .column
+                    .ui.two.column.grid           
+                        .left.floated.center.aligned.column
+                            h1.ui.header A - Team Fitness Center
+                            br
+                            h2 "Where you start building your dream body"
+                .row
+                    .ui.column.grid 
+                        
+                        .right.floated.center.aligned.column.five.wide
+                                    .column
+                                        h1#login Log-in to your account
+                                        form.ui.large.form(method='POST' action='/login')
+                                            
+                                                .field
+                                                    .ui.left.icon.input
+                                                        i.user.icon
+                                                        input(type='text', name='username', placeholder='Username')
+                                                .field
+                                                    .ui.left.icon.input
+                                                        i.lock.icon
+                                                        input(type='password', name='password', placeholder='Password')
+                                                .field
+                                                    a.ui.fluid.large.red.submit.button(href=`#`) Login
+                                                .ui.error.message
+                                                .p(style='color: white')
+                                                    | Not a member yet? 
+                                                    a(href='/signup' style='color: #E53935') Sign Up
+                               
+                #navbar.ui.large.top.fixed.inverted.menu  
+                    a.header.item(href='/home') A - TEAM FITNESS CENTER
+                        i.heartbeat.icon
+                        
+                    .right.menu
+                        a.item(href='/home#about') About
+                        .item.active.red Login
+                        a.item(href='/signup') Register
+                    
+                
+               
+        
+                    
+                        
+                        
+
+               
+            
+
+            
+                                                
+    script.
+            
+        $('#jsmonth').dropdown();
+        $('#jsmemtype').dropdown(); 
+        $('#all').transition({
+            animation  : 'fade in',
+            duration   : '2s'});
+        $('.message .close').on('click', function() {
+        $(this).closest('.message').transition('fade');});
+        $('.ui.large.form')
+            .form({
+            fields: {
+                username: {
+                identifier  :'username',
+                rules: [
+                    {
+                    type   : 'empty',
+                    prompt : 'Please enter your username'},
+                        ]},
+                password: {
+                identifier  : 'password',
+                rules: [
+                    {
+                    type   : 'empty',
+                    prompt : 'Please enter your password'},
+                    {
+                    type   : 'length[6]',
+                    prompt : 'Your password must be at least 6 characters'}]}
+                    }
+                });
+                    
+            

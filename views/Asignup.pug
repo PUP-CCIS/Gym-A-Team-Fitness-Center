@@ -1,0 +1,346 @@
+html
+    head
+        title GYMONATOR
+        link(rel="stylesheet" href="/font/css/font-awesome.min.css")
+        link(rel="stylesheet" href="/semantic/semantic-custom.css")
+        link(rel="stylesheet" href="/semantic/dist/semantic.min.css")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+        script(src="/semantic/dist/semantic.min.js")
+        
+    
+        style(type='text/css').
+            body {
+            background-color: #fff;
+            }
+            body > .grid {
+            height: 100%;
+            }  
+            h1.ui.header{
+            padding-top: 1em; 
+            font-size: 4em;
+            font-family: 'century gothic';
+            font-weight: 200%;
+            color:white;
+            }
+            h2{
+            font-size:1.4em;
+            padding:0;
+            margin-top:0;   
+            font-weight: 100%;
+            color:#ffcccc;
+            padding-bottom:2em;
+            }
+            h3{
+            font-weight: 300%;
+
+
+
+            }
+            #lstring{
+                padding-bottom:3em;
+            }
+            .landpage-image{
+            height: 55%;
+            }
+            .bg{
+                background-color: #1B1C1E;
+                width: auto;
+                height: auto;
+            }
+            .ui.message.warning.transition.visible{
+                height:60px;
+                font-size:13px;
+            }
+            .regform{
+                padding-top:20px;
+            }
+            h3.ui.horizontal.divider.header{
+                font-weight:200%;
+            }
+
+    body
+        //- {#all.container    
+        //-     #navbar.ui.large.top.fixed.inverted.menu   
+        //-             a.header.item(href='/Ahome') A - TEAM FITNESS CENTER
+        //-                 i.heartbeat.icon      
+        //-             .right.menu
+        //-                 a.item(href='/Aprogram') Programs
+        //-                 a.item(href='/Ahome') About
+        //-                 a.item(href='/Alogin') Login
+        //-                 .item.active.red Register
+           
+        //-     .ui.middle.aligned.center.aligned.grid
+        //-         .column
+        //-             h1.ui.header Be a Member!
+        //-             h2 Don't stop. 
+        //-             h2 Push harder.
+        //-             h2#lstring Keep going.
+                        
+        //-             .container
+        //-                 form.ui.large.form
+        //-                     h3.ui.horizontal.divider.header Personal Information             
+                            
+        //-                     .equal.width.fields
+        //-                         .field
+        //-                             br
+        //-                             label
+        //-                             input(type='text', placeholder='First Name',name='fname')
+        //-                         .field
+        //-                             br
+        //-                             label
+        //-                             input(type='text', placeholder='Middle Name',name='mname')
+        //-                         .field
+        //-                             br
+        //-                             label
+        //-                             input(type='text', placeholder='Last Name',name='lname')
+                                        
+        //-                     .four.fields
+        //-                         .field
+        //-                             br
+        //-                             label
+        //-                             input(type='text', placeholder='Day',maxlength="2",name='day')
+
+        //-                         .field
+                                    
+        //-                             label  Birthdate
+        //-                             select#jsmonth.ui.dropdown.fluid(name='Month')
+        //-                                 option(value='') Month
+        //-                                 option(value='1') January
+        //-                                 option(value='2') February
+        //-                                 option(value='3') March
+        //-                                 option(value='4') April
+        //-                                 option(value='5') May
+        //-                                 option(value='6') June
+        //-                                 option(value='7') July
+        //-                                 option(value='8') August
+        //-                                 option(value='9') September
+        //-                                 option(value='10') October
+        //-                                 option(value='11') November
+        //-                                 option(value='12') December
+
+        //-                         .field
+        //-                             br
+        //-                             label
+        //-                             input(type='text', placeholder='Year',maxlength="4",name='year')
+                                
+        //-                         .eight.wide.field
+        //-                             label Contact Number
+        //-                             input(type='text', placeholder='#',maxlength="11",name='contact')
+
+        //-                     h3.ui.horizontal.divider.header Credentials and Authenications    
+        //-                     .two.fields
+        //-                         .field
+        //-                             br
+        //-                             label
+        //-                             .ui.left.icon.input
+        //-                                 i.user.icon
+        //-                                 input(type='text', name='username', placeholder='Username')
+        //-                         .field
+        //-                             br
+        //-                             label
+        //-                             .ui.left.icon.input
+        //-                                 i.lock.icon
+        //-                                 input(type='password', name='password', placeholder='Password') 
+        //-                     .field     
+        //-                         label  Membership Type
+        //-                         select#jsmemtype.ui.dropdown.fluid(name='MembType')
+        //-                             option(value='') Choose Membership Type
+        //-                             option(value='0') Monthly             
+        //-                             option(value='1') Quarterly        
+        //-                             option(value='2') Annually 
+        //-                     //- .field
+        //-                     //-     .ui.message.warning.transition.visible
+        //-                     //-         i.close.icon
+        //-                     //-         p All fields are required. Please fill-up everything.
+
+        //-                     .ui.error.message
+ 
+
+        //-                     .field 
+        //-                         .a(href='/home')
+        //-                             a.ui.fluid.large.red.submit.button(href=`#`)     Sign-up}
+        
+          
+        all.container  
+            
+            navbar.ui.large.top.fixed.inverted.menu   
+                    a.header.item(href='/home') A - TEAM FITNESS CENTER
+                        i.heartbeat.icon      
+                    .right.menu
+                        a.item(href='/Aprogram') Programs
+                        a.item(href='/home') About
+                        a.item(href='/login') Login
+                        .item.active.red Register
+            .bg
+                .column
+                    .ui.column.grid
+                        .middle.aligned.center.aligned.column
+                        
+                            h1.ui.header Be a Member!
+                            h2 "Don't stop, push harder, keep going"
+	                        
+
+
+
+            .row
+                .ui.two.column.centered.grid
+                    .column
+                        form.ui.large.form.regform(method='POST' action='/signup')
+                            
+                            h3.ui.horizontal.divider.header Personal Information             
+                            
+                            .equal.width.fields
+                                .field
+                                    br
+                                    label
+                                    input(type='text', placeholder='First Name',name='fname')
+                                .field
+                                    br
+                                    label
+                                    input(type='text', placeholder='Middle Name',name='mname')
+                                .field
+                                    br
+                                    label
+                                    input(type='text', placeholder='Last Name',name='lname')
+                                        
+                            .four.fields
+                                .field
+                                    br
+                                    label
+                                    input(type='text', placeholder='Day',maxlength="2",name='day')
+
+                                .field
+                                    
+                                    label  Birthdate
+                                    select#jsmonth.ui.dropdown.fluid(name='month')
+                                        option(value='') Month
+                                        option(value='01') January
+                                        option(value='02') February
+                                        option(value='03') March
+                                        option(value='04') April
+                                        option(value='05') May
+                                        option(value='06') June
+                                        option(value='07') July
+                                        option(value='08') August
+                                        option(value='09') September
+                                        option(value='10') October
+                                        option(value='11') November
+                                        option(value='12') December
+
+                                .field
+                                    br
+                                    label
+                                    input(type='text', placeholder='Year',maxlength="4",name='year')
+                                
+                                .eight.wide.field
+                                    label Contact Number
+                                    input(type='text', placeholder='#',maxlength="11",name='contact')
+
+                            h3.ui.horizontal.divider.header Security   
+                            .two.fields
+                                .field
+                                    br
+                                    label
+                                    .ui.left.icon.input
+                                        i.user.icon
+                                        input(type='text', name='emailAdd', placeholder='Email Address')
+                                .field
+                                    br
+                                    label
+                                    .ui.left.icon.input
+                                        i.lock.icon
+                                        input(type='password', name='password', placeholder='Password') 
+                            .field     
+                                label  Membership Type
+                                select#jsmemtype.ui.dropdown.fluid(name='memtype')
+                                    option(value='') Choose Membership Type
+                                    option(value='0') Monthly             
+                                    option(value='1') Quarterly        
+                                    option(value='2') Annually 
+                            //- .field
+                            //-     .ui.message.warning.transition.visible
+                            //-         i.close.icon
+                            //-         p All fields are required. Please fill-up everything.
+
+                            .ui.error.message
+ 
+
+                            .field 
+                                .a(href='/login')
+                                    a.ui.fluid.large.red.submit.button(href=`#`)     Sign-up
+                                                
+    script.
+            
+        $('#jsmonth').dropdown();
+        $('#jsmemtype').dropdown(); 
+        $('#all').transition({
+            animation  : 'fade in',
+            duration   : '2s'});
+        //- $('.message .close').on('click', function() {
+        //- $(this).closest('.message').transition('fade');});
+        $('.ui.large.form')
+            .form({
+            fields: {
+                fname: {
+                identifier  :'fname',
+                rules: [
+                    {
+                    type   : 'empty',
+                    prompt : 'Please enter your first name'},]},
+                lname: {
+                identifier  :'lname',
+                rules: [
+                    {
+                    type   : 'empty',
+                    prompt : 'Please enter your last name'},]},
+                day: {
+                identifier  :'day',
+                rules: [
+                    {
+                    type   : 'empty',
+                    prompt : 'Please enter your day of birth'},]},
+                month: {
+                identifier  :'month',
+                rules: [
+                    {
+                    type   : 'empty',
+                    prompt : 'Please enter your birth-month'},]},
+                year: {
+                identifier  :'year',
+                rules: [
+                    {
+                    type   : 'empty',
+                    prompt : 'Please enter your birth-year'},]},
+                contact: {
+                identifier  :'contact',
+                rules: [
+                    {
+                    type   : 'empty',
+                    prompt : 'Please enter your contact number'},
+                    ]},
+                memtype: {
+                identifier  :'memtype',
+                rules: [
+                    {
+                    type   : 'empty',
+                    prompt : 'Please select a member type'},]},
+                    username: {
+                identifier  :'username',
+                rules: [
+                    {
+                    type   : 'empty',
+                    prompt : 'Please enter your username'},
+                        ]},
+                password: {
+                identifier  : 'password',
+                rules: [
+                    {
+                    type   : 'empty',
+                    prompt : 'Please enter your password'},
+                    {
+                    type   : 'length[6]',
+                    prompt : 'Your password must be at least 6 characters'}]}
+                    }
+                });
+                    
+            
